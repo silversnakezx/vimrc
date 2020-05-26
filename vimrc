@@ -1,6 +1,10 @@
 " Make space more useful
 let mapleader = ","
 let maplocalleader = "\\"
+
+" make tab 4 spaces
+set tabstop=4 shiftwidth=4 expandtab
+
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
 behave mswin
