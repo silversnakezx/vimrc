@@ -41,21 +41,42 @@ nnoremap H 0
 nnoremap L $
 vnoremap <leader>" <esc>`<i"<esc>`>a"<esc>
 inoremap <leader>" <esc>bi"<esc>ei<right>"
+
 iabbrev tpye type
 iabbrev @@ 2598050381@qq.com
 iabbrev ccopy Copyright 2017 Zhang Xian, all rights reserved.
 iabbrev ssig -- <cr>Zhang Xian<cr>2598050381@qq.com
+" commonly auto correction and some aliases
+
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+" for quickly edit and sourcing vimrc file
 noremap <leader>- ddp
 noremap <leader>_ ddP
 inoremap <c-u> <esc>viWU<esc>Ei<right>
 nnoremap <leader><c-u> viWU<esc>El
-cnoremap jk <esc> 
+
 nnoremap gt <c-w><c-w>
 nnoremap gT <c-w>W
+" for quick window switching
 inoremap jk <esc>
 vnoremap jk <esc>
+cnoremap jk <esc> 
+" for quickly quit to normal mode
+nnoremap <space> za
+" for making folding unfolding nice
+nnoremap k gk
+nnoremap j gj
+nnoremap gk k
+nnoremap gj j
+" swap the up/down real lines and display lines in normal mode
+nnoremap K kJ
+" K as join the current line with above line	
+nnoremap x "_x
+nnoremap X "_D
+nnoremap xx "_dd
+" shortcut for delete things into blackhole register
+
 set nu
 set relativenumber
 set numberwidth=4
@@ -68,6 +89,8 @@ nnoremap <left> <nop>
 nnoremap <right> <nop>
 nnoremap <up> <nop>
 nnoremap <down> <nop>
+" for disable arrow and esc keys 
+
 set diffexpr=MyDiff()
 function MyDiff()
 let opt = '-a --binary '
