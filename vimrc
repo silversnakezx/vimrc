@@ -1,18 +1,19 @@
 " Make space more useful
 let mapleader = ","
 let maplocalleader = "\\"
-
+" window maximize
+nnoremap <c--> <c-w><c-o>
 " make tab 4 spaces
 set tabstop=4 shiftwidth=4 expandtab
 
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
-behave mswin
+behave 
 set encoding=utf-8
 mapc
 noremap <c-n> :NERDTreeToggle<cr>
 filetype plugin on
-let Tlist_Ctags_Cmd ='c:\program Fies (x86)\Vim\vim80\bundle\taglist_46\ctags.exe'
+let Tlist_Ctags_Cmd ='c:\program Files (x86)\Vim\vim80\bundle\taglist_46\ctags.exe'
 color slate
 execute pathogen#infect()
 nnoremap <leader>q :call QuickfixToggle()<cr>
@@ -22,7 +23,7 @@ function! QuickfixToggle()
 	if g:quickfix_is_open
 		cclose
 		let g:quickfix_is_open=0
-	else
+      else
 		copen
 		let g:quickfix_is_open=1
 	endif
